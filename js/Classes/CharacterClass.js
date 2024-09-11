@@ -70,7 +70,7 @@ class Character {
             
         if (chance < (this.agility * 0.3).toFixed(4)) {
             crit_dmg = dmg * 1.5;
-            target.gain_damage(crit_dmg * 1.5);
+            target.gain_damage(crit_dmg);
 
             atk_log.innerHTML = "<b>"+ this.nickname + "</b> dealt 20 damage (Сritical damage) to " + this.atk_choice;
             // atk_log.innerHTML = "<b>"+ this.nickname + "</b> dealt 20 damage to <b>"+ player_one.nickname +"</b>  (Сritical damage)" ;
