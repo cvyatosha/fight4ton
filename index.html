@@ -25,39 +25,44 @@
 
     <div class="min-h-screen bg-gray-100 overflow-hidden">              
         <main>
-            <section id="menu-section" class="py-12"><!--menu-->
+        <!--MENU-->
+            <section id="menu-section" class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <h1 class="mb-20 pb-2 text-5xl font-bold text-center border-b-2 border-gray-300">Fight 4 Ton</h1>
                     
+                    <!--characters-->
                     <div class="mb-20 grid grid-flow-row grid-cols-1 gap-10 lg:grid-cols-2">
-                        <div class="w-full sm:px-6 lg:px-8"> <!--character-->
+                    <!--the first character-->
+                        <div class="w-full sm:px-6 lg:px-8"> 
                                 <div class="py-6 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                    <div class="flex justify-center mb-5" id="character__image">
-                                        <img src="images/characters/man_1.png" alt="The best image of your character that he or she has" 
+                                    <!--Chatacter IMG-->
+                                    <div class="flex justify-center mb-5">
+                                        <img id="p1_character_image" src="images/characters/man_1.png" alt="The best image of your character that he or she has" 
                                         class="w-1/2">
                                     </div>
-            
+
+                                    <!--Chatacter Info-->
                                     <div id="character__info" class="p-6 pb-0 text-gray-900">
-                                        <input type="text" id="user-one-name" class="w-full mb-10 text-center text-2xl border-b-2 border-gray-400" placeholder="Enter your name" value="Player 1">
+                                        <input type="text" id="user-one-name" class="w-full mb-10 text-center text-4xl border-b-2 border-gray-400" placeholder="Enter your name" value="Player 1">
                                         
                                         <div class="flex justify-around gap-10">
                                             <div class="text-center text-xl">
                                                 <label for="character-one-strength">
-                                                    <input type="number" id="character-one-strength" value="20" placeholder="Strength" class="w-24 text-center text-2xl ">
+                                                    <input type="number" id="character-one-strength" value="20" placeholder="Strength" class="w-24 text-center text-3xl ">
                                                     <p>Strength</p>
                                                 </label>
                                             </div>
 
                                             <div class="text-center text-xl">
                                                 <label for="character-one-agility" class="cursor-pointer">
-                                                    <input type="number" id="character-one-agility" value="15" placeholder="Agility" class="w-24 text-center text-2xl">
+                                                    <input type="number" id="character-one-agility" value="15" placeholder="Agility" class="w-24 text-center text-3xl">
                                                     <p>Agility</p>
                                                 </label>
                                             </div>
 
                                             <div  class="text-center text-xl">
                                                 <label for="character-one-endurance">
-                                                    <input type="number" id="character-one-endurance" value="18" placeholder="Endurance" class="w-24 text-center text-2xl">
+                                                    <input type="number" id="character-one-endurance" value="18" placeholder="Endurance" class="w-24 text-center text-3xl">
                                                     <p>Endurance</p>
                                                 </label>
                                             </div>                                            
@@ -66,34 +71,36 @@
                                 </div>
                         </div>
 
-                        <div class="w-full sm:px-6 lg:px-8"> <!--character-->
+                    <!--the second character-->
+                        <div class="w-full sm:px-6 lg:px-8"> 
                                 <div class="py-6 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                    <div class="flex justify-center mb-5" id="character__image">
-                                        <img src="images/characters/bandit.png" alt="The best image of your character that he or she has" 
-                                        class="w-1/2 ">
+                                    <!--Chatacter IMG-->
+                                    <div class="flex justify-center mb-5">
+                                        <img id="p2_character_image" class="max-h-full" src="images/characters/man_2.png" alt="The best image of your character that he or she has" class="w-1/2 " style="transform: scaleX(-1);">
                                     </div>
-            
+                                    
+                                    <!--Chatacter Info-->
                                     <div id="character__info" class="p-6 pb-0 text-gray-900">
-                                        <input type="text" id="user-two-name" class="w-full mb-10 text-center text-2xl border-b-2 border-gray-400" placeholder="Enter your name" value="Player 2">
+                                        <input type="text" id="user-two-name" class="w-full mb-10 text-center text-4xl border-b-2 border-gray-400" placeholder="Enter your name" value="Player 2">
                                         
-                                        <div class="flex justify-around">
+                                        <div class="flex justify-around gap-10">
                                             <div class="text-center text-xl">
-                                                <label for="character-one-strength">
-                                                    <input type="number" id="character-one-strength" value="20" placeholder="Strength" class="w-24 text-center text-2xl ">
+                                                <label for="character-two-strength">
+                                                    <input type="number" id="character-two-strength" value="20" placeholder="Strength" class="w-24 text-center text-3xl ">
                                                     <p>Strength</p>
                                                 </label>
                                             </div>
 
                                             <div class="text-center text-xl">
-                                                <label for="character-one-agility" class="cursor-pointer">
-                                                    <input type="number" id="character-one-agility" value="15" placeholder="Agility" class="w-24 text-center text-2xl">
+                                                <label for="character-two-agility" class="cursor-pointer">
+                                                    <input type="number" id="character-two-agility" value="15" placeholder="Agility" class="w-24 text-center text-3xl">
                                                     <p>Agility</p>
                                                 </label>
                                             </div>
 
                                             <div  class="text-center text-xl">
-                                                <label for="character-one-endurance">
-                                                    <input type="number" id="character-one-endurance" value="18" placeholder="Endurance" class="w-24 text-center text-2xl">
+                                                <label for="character-two-endurance">
+                                                    <input type="number" id="character-two-endurance" value="18" placeholder="Endurance" class="w-24 text-center text-3xl">
                                                     <p>Endurance</p>
                                                 </label>
                                             </div> 
@@ -108,118 +115,208 @@
                     </button>
                 </div>
             </section>
-
+        
+        <!--GAME-->
             <section id="game-section" class="hidden py-10">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="flex justify-between mb-10 pb-2 border-b-2 border-gray-300">
-                        <h1 class="text-5xl font-bold text-center">Fight 4 Ton</h1>
+                <!--game header-->
+                    <div class="flex justify-between items-center relative mb-16 pb-2 border-b-2 border-gray-300">
+                        <h1 class="text-5xl font-bold text-center back_to_menu_btn cursor-pointer">Fight 4 Ton</h1>
                         
-                        <button type="button" class="back_to_menu_btn inline-flex justify-center items-center px-4 py-2 bg-orange-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                            Back to menu
+                        <div class="absolute top-1/2 left-1/2 p-5 justify-center bg-white outline outline-gray-300 shadow-sm sm:rounded-t-lg sm:-my-px sm:flex" style="transform: translate(-50%, -50%);">
+                            <p id="timer-block" class="text-4xl font-bold text-center" >00:00</p>
+                        </div>
+
+                        <div class="">
+                            <p class="text-4xl font-bold text-right justify-self-center" id="round-text">Number of round</p>
+                            <p id="current-player-name" class="text-right text-2xl">Nickname of current players</p>
+                        </div>
+
+                    </div>
+
+                <!-- Main game layout -->
+                    <div id="players-characters" class="grid grid-flow-row grid-cols-2 mb-16 gap-10 lg:grid-cols-2">
+
+                    <!--Active player-->
+                        <div id="active-player" class="flex gap-10 justify-between w-full p-6 bg-white text-gray-900 overflow-hidden shadow-sm sm:rounded-lg">
+                            
+                        <!-- Character info -->
+                            <div class="w-1/2">
+                                <h2 id="active-player-name" class="w-full mb-5 text-center text-4xl"></h2>
+    
+                                <!-- Health bar -->
+                                <div id="active-player-health" class="mb-5 border-4 border-red-500 rounded-lg">
+                                    <span class="block h-7 bg-red-400 rounded-sm">
+                                        <p class="text-lg font-bold text-center"></p>
+                                    </span>
+                                </div>
+    
+                                <!-- Stats -->
+                                <div class="flex justify-around gap-5">
+                                    <div class="text-center text-lg w-24">
+                                        <p id="active-player-strength" class="text-center text-2xl">💪 <span></span></p>
+                                        <p>Strength</p>
+                                    </div>
+    
+                                    <div class="text-center text-lg w-24">
+                                        <p id="active-player-agility" class="text-center text-2xl">🏃‍➡️ <span></span></p>
+                                        <p>Agility</p>
+                                    </div>
+    
+                                    <div  class="text-center text-lg w-24">
+                                        <p id="active-player-endurance" class="text-center text-2xl">⌛ <span></span></p>
+                                        <p>Endurance</p>
+                                    </div>                                            
+                                </div>
+                            </div>
+
+                        <!-- Character image & Defense -->
+                            <div class="group flex flex-col" >
+                                <h3 class="mb-5 text-2xl font-bold text-center">Defense 🛡️</h3>
+                                
+                                <div class="relative h-full">
+                                    <img id="active-player-image" class="w-48 object-contain h-full" src="" alt="The best image of your character that he or she has">
+
+                                    <div id="defense_action" class="opacity-0 group-hover:opacity-100 transition duration-200 ease-in flex flex-col justify-around absolute top-0 left-0 h-full w-full text-center">
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-defense-action" value="head/body"> Head/Body</label>
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-defense-action" value="body/groin"> Body/Groin</label>
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-defense-action" value="groin/legs"> Groin/Legs</label>
+                                    </div>
+                                </div>
+                            
+                            
+                            </div>
+                        </div>
+
+                    
+                    <!--Inactive_player-->
+                        <div id="inactive-player" class="flex gap-10 justify-between w-full p-6 bg-white text-gray-900 overflow-hidden shadow-sm sm:rounded-lg">
+                        
+                        <!-- Character image & Defense -->
+                            <div class="group flex flex-col items-center" >
+                                <h3 class="mb-5 text-2xl font-bold text-center">Attack ⚔️</h3>
+                                
+                                <div class="relative">
+                                    <img id="inactive-player-image" class="w-48 object-contain" src="" alt="The best image of your character that he or she has" style="transform: scaleX(-1);">
+
+                                    <div id="defense_action" class="opacity-0 group-hover:opacity-100 transition duration-200 ease-in flex flex-col justify-around absolute top-0 left-0 h-full w-full text-center">
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-attack-action" value="head"> Head</label>
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-attack-action" value="body"> Body</label>
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-attack-action" value="groin"> Groin</label>
+                                        <label class="p-2 text-xl text-white bg-black/[.6] rounded-lg"><input type="radio" name="player-attack-action" value="legs"> Legs</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Character info -->
+                            <div class="w-1/2">
+                                <h2 id="inactive-player-name" class="w-full mb-5 text-center text-4xl"></h2>
+    
+                                <!-- Health bar -->
+                                <div id="inactive-player-health" class="mb-5 border-4 border-red-500 rounded-lg">
+                                    <span class="block h-7 bg-red-400 rounded-sm">
+                                        <p class="text-lg font-bold text-center"></p>
+                                    </span>
+                                </div>
+    
+                                <!-- Stats -->
+                                <div class="flex justify-around gap-5">
+                                    <div class="text-center text-lg w-24">
+                                        <p id="inactive-player-strength" class="text-center text-2xl">💪 <span></span></p>
+                                        <p>Strength</p>
+                                    </div>
+    
+                                    <div class="text-center text-lg w-24">
+                                        <p id="inactive-player-agility" class="text-center text-2xl">🏃‍➡️ <span></span></p>
+                                        <p>Agility</p>
+                                    </div>
+    
+                                    <div  class="text-center text-lg w-24">
+                                        <p id="inactive-player-endurance" class="text-center text-2xl">⌛ <span></span></p>
+                                        <p>Endurance</p>
+                                    </div>                                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Players-action -->
+                    <div id="choice-block" class="mb-20 w-full p-5 bg-white overflow-hidden shadow-sm sm:rounded-lg flex-col hidden sm:flex">
+                        <button id="game_move_btn" type="button" class="w-full inline-flex justify-center items-center px-6 py-4 bg-orange-600 border border-transparent rounded-md font-semibold text-xl text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                            Make my move
                         </button>
                     </div>
-                    
-                    <div class="grid grid-flow-row grid-cols-3 mb-16 gap-10 lg:grid-cols-3">
-                        <!--player one-->
-                        <div class="w-full sm:px-6 lg:px-8">
-                            <div id="player-one" class="py-6 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="flex justify-center cursor-pointer" id="character__image">
-                                    <img src="images/characters/man_1.png" alt="The best image of your character that he or she has" 
-                                    class="w-1/2">
-                                </div>
-        
-                                <div id="character__info" class="p-6 pb-0 text-gray-900">
-                                    <h2 id="player-one-name" class="w-full mb-5 text-center text-2xl"></h2>
-                                    <div class="">
-                                        <!-- Health bar -->
-                                        <div id="player-one-health" class="mb-5 border-4 border-red-500">
-                                            <span class="block bg-red-400 h-7">
-                                                <p class="text-lg font-bold text-center"></p>
-                                            </span>
-                                        </div>
 
-                                        <div>
-                                            <h3 class="mb-1 text-center text-2xl font-bold">Stats</h3>
-                                            <div id="player-one-stats"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Choice-plug -->
+                    <div id="choice-plug" class="flex justify-center items-center mb-16 w-full">
+                        <div class="p-5 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg flex-col sm:-my-px sm:flex">
+                            <h2 class="mb-10 text-center text-2xl"></h2>
+
+                            <button id="choice_ready_btn" type="button" class="w-full inline-flex justify-center items-center px-4 py-2 bg-orange-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                I'm ready
+                            </button>
+                        </div>
+                    </div>
+
+                <!-- Round-plug -->
+                    <div id="round-results" class="grid grid-flow-row grid-cols-3 mb-16 gap-10 lg:grid-cols-3">
+
+                    <!--Player One-->
+                        <div id="round-results-player-one" class="flex flex-col items-center w-full p-6 bg-white text-gray-900 overflow-hidden shadow-sm sm:rounded-lg">
+                            <h2 id="round-results-p1-name" class="w-full mb-5 text-center text-4xl"></h2>
+                            
+                            <div class="flex relative h-full mb-5">
+                                <img id="round-results-p1-image" class="mr-5 w-48 object-contain h-full" src="images/characters/man_1.png" alt="The best image of your character that he or she has">
+                            
+                                <div class="relative w-20 overflow-hidden">
+                                    <div id="round-results-p1-shield" class="flex items-center justify-center absolute top-0 left-0 w-10 h-1/2 bg-blue-400">🛡️</div>
+                                    <div id="round-results-p2-atk" class="flex items-center justify-center absolute top-0 right-0 w-10 h-1/3 bg-red-400">⚔️</div>
+                                </div>    
+                            </div>
+
+                            <div id="round-results-p1-health" class="w-full border-4 border-red-500 rounded-lg">
+                                <span class="block h-7 bg-red-400 rounded-sm">
+                                    <p class="text-lg font-bold text-center"></p>
+                                </span>
+                            </div>
+                        </div>
+                    <!--Round list result-->
+                        <div class="p-6 bg-white text-gray-900 overflow-hidden shadow-sm sm:rounded-lg">
+                            <h3 id="round-results-number" class="mb-3 pb-2 text-center text-3xl font-bold border-b-2"></h3>
+                            
+                            <div class="flex flex-col justify-around mb-3">
+                                <p id="round-results-p1-action" class="mb-3 text-lg"></p>
+                                <p id="round-results-p2-action" class="text-lg"></p>
+                            </div>
+
+                            <div>
+                                <div class="flex items-center justify-center mb-5 py-2 px-5 text-white bg-blue-400">🛡️ Player defense zone</div>
+                                <div class="flex items-center justify-center py-2 px-5 text-white bg-red-400">⚔️ The enemy's attack zone</div>
                             </div>
                         </div>
 
-                        <!-- Players-action -->
-                        <div id="players-action" class="w-full">
-                            <div class="mb-7">
-                                <div class="p-5 justify-center bg-white shadow-sm sm:rounded-l-lg sm:-my-px sm:flex">
-                                    <p class="text-4xl text-center" id="step_block">Number of round</p>
-                                </div>
+                    <!--Player Two-->
+                        <div id="inactive-player" class="flex flex-col items-center w-full p-6 bg-white text-gray-900 overflow-hidden shadow-sm sm:rounded-lg">
+                            <h2 id="round-results-p2-name" class="w-full mb-5 text-center text-4xl"></h2>
+                            
+                            <div class="flex relative mb-5 h-full">
+                                <div class="relative w-20 overflow-hidden">
+                                    <div id="round-results-p1-atk" class="flex items-center justify-center absolute top-0 left-0 w-10 h-1/3 bg-red-400">⚔️</div>
+                                    <div id="round-results-p2-shield" class="flex items-center justify-center absolute top-0 right-0 w-10 h-1/2 bg-blue-400">🛡️</div>
+                                </div>  
+
+                                <img id="round-results-p2-image" class="mr-5 w-48 object-contain h-full" src="images/characters/man_1.png" alt="The best image of your character that he or she has" style="transform: scaleX(-1);">
                             </div>
 
-                            <div class="mb-10 p-5 bg-white overflow-hidden shadow-sm sm:rounded-l-lg flex-col hidden sm:-my-px sm:flex">
-                                <div id="choice-block">
-                                    <h2 class="text-center text-2xl mb-10">Nickname of current players</h2>
-        
-                                    <div class="flex justify-between gap-10">
-                                        <div id="attack_actions" class="flex flex-col mb-5">
-                                            <h3 class="mb-1 text-2xl font-bold text-center">Attack ⚔️</h3>
-                                            <label class="text-xl"><input type="radio" name="player-attack-action" value="head"> Head</label>
-                                            <label class="text-xl"><input type="radio" name="player-attack-action" value="body"> Body</label>
-                                            <label class="text-xl"><input type="radio" name="player-attack-action" value="groin"> Groin</label>
-                                            <label class="text-xl"><input type="radio" name="player-attack-action" value="legs"> Legs</label>
-                                        </div>
-
-                                        <div id="defense_action" class="flex flex-col mb-5">
-                                            <h3 class="mb-1 text-2xl font-bold text-center">Defense 🛡️</h3>
-                                            <label class="text-xl"><input type="radio" name="player-defense-action" value="head/body"> Head/Body</label>
-                                            <label class="text-xl"><input type="radio" name="player-defense-action" value="body/groin"> Body/Groin</label>
-                                            <label class="text-xl"><input type="radio" name="player-defense-action" value="groin/legs"> Groin/Legs</label>
-                                        </div>
-                                    </div>
-            
-                                    <button id="game_move_btn" type="button" class="w-full inline-flex justify-center items-center px-4 py-2 bg-orange-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                        Make my move
-                                    </button>
-                                </div>
-
-                                <div id="choice-plug" class="hidden">
-                                    <h2 class="mb-10 text-center text-2xl"></h2>
-
-                                    <button id="choice_ready_btn" type="button" class="w-full inline-flex justify-center items-center px-4 py-2 bg-orange-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                        I'm ready
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--player two-->
-                        <div class="w-full sm:px-6 lg:px-8"> 
-                            <div id="player-two" class="py-6 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="flex justify-center cursor-pointer" id="character__image">
-                                    <img src="images/characters/bandit.png" alt="The best image of your character that he or she has" 
-                                    class="w-1/2 ">
-                                </div>
-        
-                                <div id="character__info" class="p-6 pb-0 text-gray-900">
-                                    <h2 id="player-two-name" class="w-full mb-5 text-center text-2xl"></h2>
-                                    <div class="">
-                                        <!-- Health bar -->
-                                        <div id="player-two-health" class="mb-5 border-4 border-red-500">
-                                            <span class="block bg-red-400 h-7">
-                                                <p class="text-lg font-bold text-center"></p>
-                                            </span>
-                                        </div>
-
-                                        <div>
-                                            <h3 class="mb-1 text-center text-2xl font-bold">Stats</h3>
-                                            <div id="player-two-stats"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div id="round-results-p2-health" class="w-full border-4 border-red-500 rounded-lg">
+                                <span class="block h-7 bg-red-400 rounded-sm">
+                                    <p class="text-lg font-bold text-center"></p>
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Game logs -->
+                <!-- Game logs -->
                     <div class="py-6 px-12 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="border-b-2 border-gray-300">
                             <h2 class=" text-2xl font-bold text-center">Game log</h2>

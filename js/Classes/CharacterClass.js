@@ -1,4 +1,5 @@
 class Character {
+    character_img_path;
     nickname;
     health;
     full_health;
@@ -9,24 +10,14 @@ class Character {
     deff_choice;
 
 
-    constructor(player_name, strength, agility, endurance) {
+    constructor(character_img_path, player_name, strength, agility, endurance) {
+        this.character_img_path = character_img_path;
         this.nickname = player_name;
         this.health = endurance * 10;
         this.full_health = this.health;
         this.strength = strength;
         this.agility = agility;
         this.endurance = endurance;
-    }
-
-    stats_update(number) {
-        document.querySelector("#player-"+ number +"-name").innerHTML = this.nickname;
-
-        document.querySelector("#player-"+ number +"-health p").innerHTML = this.health;
-        document.querySelector("#player-"+ number +"-health span").style.width = ((this.health * 100) / this.full_health ) + "%";
-
-        document.querySelector("#player-"+ number +"-stats").innerHTML = "<p class='text-xl'>Strength: <i>" + this.strength + "</i></p>" 
-        + "<p class='text-xl'>Agility: <i>" + this.agility + "</i></p>"
-        + "<p class='text-xl'>Endurance: <i>" + this.endurance + "</i></p>";
     }
 
     move_choice(deff, atk) {
@@ -39,49 +30,48 @@ class Character {
         this.deff_choice = "";
     }
 
-    gain_damage(damage_suffered) {
+    gain_damage(damage_suffered, atked_zone) {
         let chance = Math.random().toFixed(4) * 100,
-        gain_dmg_log = document.createElement("p");
+            gain_dmg_log = document.createElement("p");
 
         gain_dmg_log.className = 'text-lg';                
         
         if (chance < (this.agility * 0.5).toFixed(4)) {
-            gain_dmg_log.innerHTML = "<b>"+ this.nickname + "</b> dodged an attack";
+            gain_dmg_log.innerHTML = `<b>${this.nickname}</b> dodged an <b><i>${damage_suffered}<i></b> dmg`;
             
             return;
         } else {
             this.health = this.health - damage_suffered;
+
+            gain_dmg_log.innerHTML = `<b>${this.nickname}</b> defended his <b><i>${this.deff_choice}</i></b> instead of his <b><i>${atked_zone}</i></b> and received <b><i>${damage_suffered}<i></b> dmg`;
         }
 
         if (this.health < 0) this.health = 0;
 
-
         document.querySelector("#game-log").appendChild(gain_dmg_log);
-        document.querySelector("#player-one-health p").innerHTML =  this.health;
-        document.querySelector("#player-one-health span").style.width =  ((this.health * 100) / this.full_health ) + "%";
+        document.querySelector("#game-log").scrollTop = document.querySelector("#game-log").scrollHeight;
     }
 
     deal_damage(target) {
         let chance = Math.random().toFixed(4) * 100,
-            dmg = this.strength * 2,
+            standard_dmg = this.strength * 2,
+            dmg,
+            isCrit,
             atk_log = document.createElement("p");
 
         atk_log.className = 'text-lg';  
             
         if (chance < (this.agility * 0.3).toFixed(4)) {
-            crit_dmg = dmg * 1.5;
-            target.gain_damage(crit_dmg);
-
-            atk_log.innerHTML = "<b>"+ this.nickname + "</b> dealt 20 damage (Сritical damage) to " + this.atk_choice;
-            // atk_log.innerHTML = "<b>"+ this.nickname + "</b> dealt 20 damage to <b>"+ player_one.nickname +"</b>  (Сritical damage)" ;
+            dmg = standard_dmg * 1.5;
+            isCrit = true;
         } else {
-            target.gain_damage(dmg);
-
-            atk_log.innerHTML = "<b>"+ this.nickname + "</b> dealt 20 damage to " + this.atk_choice;
-            // atk_log.innerHTML = "<b>"+ this.nickname + "</b> dealt 20 damage to <b>"+ player_one.nickname +"</b>";
+            dmg = standard_dmg;
         }
 
+        target.gain_damage(dmg, this.atk_choice);
+        atk_log.innerHTML = `<b>${this.nickname}</b>'s attack on <b><i>${this.atk_choice}</i></b> is successful, and damaged is <b><i>${dmg}/${standard_dmg}</i></b> <span class="text-red-700 text-bold">${isCrit ? "CRIT!" : ""}</span>`;
+        
         document.querySelector("#game-log").appendChild(atk_log);
-                      
+        document.querySelector("#game-log").scrollTop = document.querySelector("#game-log").scrollHeight;
     }
 }
