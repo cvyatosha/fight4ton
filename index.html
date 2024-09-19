@@ -116,8 +116,8 @@
                 </div>
             </section>
         
-        <!--GAME-->
-            <section id="game-section" class="hidden py-10">
+        <!--GAME bg-[url('images/arena. gif')]-->
+            <section id="game-section" class="hidden py-10  bg-no-repeat bg-cover bg-bottom">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <!--game header-->
                     <div class="flex justify-between items-center relative mb-16 pb-2 border-b-2 border-gray-300">
@@ -245,6 +245,16 @@
                         <button id="game_move_btn" type="button" class="w-full inline-flex justify-center items-center px-6 py-4 bg-orange-600 border border-transparent rounded-md font-semibold text-xl text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
                             Make my move
                         </button>
+
+                        <div id="win-block" class="hidden p-5">
+                            <img src="images/trophy.png" alt="trophy of the winning player" class="mb-10 w-96 mx-auto">
+                            
+                            <p class="text-center text-5xl mb-10">Player 1 win this battle</p>
+                            
+                            <button type="button" class="back_to_menu_btn w-full inline-flex justify-center items-center px-6 py-4 bg-orange-600 border border-transparent rounded-md font-semibold text-xl text-white uppercase tracking-widest hover:bg-orange-500 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                Play again
+                            </button>
+                        </div>
                     </div>
 
                 <!-- Choice-plug -->
@@ -266,11 +276,11 @@
                             <h2 id="round-results-p1-name" class="w-full mb-5 text-center text-4xl"></h2>
                             
                             <div class="flex relative h-full mb-5">
-                                <img id="round-results-p1-image" class="mr-5 w-48 object-contain h-full" src="images/characters/man_1.png" alt="The best image of your character that he or she has">
+                                <img id="round-results-p1-image" class="mr-5 w-48 object-contain h-full" src="" alt="The best image of your character that he or she has">
                             
                                 <div class="relative w-20 overflow-hidden">
                                     <div id="round-results-p1-shield" class="flex items-center justify-center absolute top-0 left-0 w-10 h-1/2 bg-blue-400">🛡️</div>
-                                    <div id="round-results-p2-atk" class="flex items-center justify-center absolute top-0 right-0 w-10 h-1/3 bg-red-400">⚔️</div>
+                                    <div id="round-results-p2-atk" class="flex items-center justify-center absolute top-0 right-0 w-10 h-1/4 bg-red-400">⚔️</div>
                                 </div>    
                             </div>
 
@@ -301,11 +311,11 @@
                             
                             <div class="flex relative mb-5 h-full">
                                 <div class="relative w-20 overflow-hidden">
-                                    <div id="round-results-p1-atk" class="flex items-center justify-center absolute top-0 left-0 w-10 h-1/3 bg-red-400">⚔️</div>
+                                    <div id="round-results-p1-atk" class="flex items-center justify-center absolute top-0 left-0 w-10 h-1/4 bg-red-400">⚔️</div>
                                     <div id="round-results-p2-shield" class="flex items-center justify-center absolute top-0 right-0 w-10 h-1/2 bg-blue-400">🛡️</div>
                                 </div>  
 
-                                <img id="round-results-p2-image" class="mr-5 w-48 object-contain h-full" src="images/characters/man_1.png" alt="The best image of your character that he or she has" style="transform: scaleX(-1);">
+                                <img id="round-results-p2-image" class="mr-5 w-48 object-contain h-full" src="" alt="The best image of your character that he or she has" style="transform: scaleX(-1);">
                             </div>
 
                             <div id="round-results-p2-health" class="w-full border-4 border-red-500 rounded-lg">

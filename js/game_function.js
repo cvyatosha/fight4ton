@@ -12,7 +12,7 @@ let player_one,
 let active_player,
     inactive_player;
 
-let timer_time = 59; // enter in second, if you want 1 min enter 60 sec
+let timer_time = 59; // enter i n second, if you want 1 min enter 60 sec
 
 
 startGameBtn.onclick = startGame;
@@ -279,7 +279,20 @@ function proceedToNextRound() {
     updateRoundDisplay();
 
     if (isPlayerDefeated(player_one, player_two)) {
-        alert('Game Over');
+        
+        toggleVisibility("#players-characters", true, "grid");
+        toggleVisibility("#choice-block", true);
+        toggleVisibility("#choice-plug", false);
+        toggleVisibility("#round-results", false);
+        toggleVisibility("#game_move_btn", false);
+        toggleVisibility("#win-block", true);
+
+        if (player_one.health <= 0) {
+            document.querySelector("#win-block p").innerHTML = `<b>${player_one.nickname} win this battle</b>`;
+        } else {
+            document.querySelector("#win-block p").innerHTML = `<b>${player_two.nickname} win this battle</b>`;
+        }
+
     }
 }
 
