@@ -12,7 +12,8 @@ let player_one,
 let active_player,
     inactive_player;
 
-let timer_time = 59; // enter i n second, if you want 1 min enter 60 sec
+let timer,
+    timer_time = 59; // enter i n second, if you want 1 min enter 60 sec
 
 
 startGameBtn.onclick = startGame;
@@ -43,14 +44,13 @@ function startGame() {
     
     switchActivePlayer();
 
+    battleTimer(timer_time);
+
     updateUIPlayersStats(active_player, "#active-player");
     updateUIPlayersStats(inactive_player, "#inactive-player");
 
     updateUIForNextMove(active_player);
-    
     updateRoundDisplay();  
-    
-    battleTimer(timer_time);
 }
 
 
@@ -205,19 +205,31 @@ function roundResultUI() {
 
 //*functional functions
 function battleTimer(duration) {
-    let timer = duration, minutes, seconds;
+
+    clearTimeout(timer);
+    clearInterval(timer);
+
+    let time = duration, minutes, seconds;
     
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+    timer = setInterval(function () {
+        minutes = parseInt(time / 60, 10);
+        seconds = parseInt(time % 60, 10);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
+        console.log(time);
         document.querySelector("#timer-block").textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
+        if (--time < 0) {
+            clearTimeout(timer);
+            clearInterval(timer);
+
+            document.querySelector("#timer-block").textContent = "--:--";
+
+            gameMoveBtn.click();
+            
+            return true;
         }
     }, 1000);
 }
@@ -247,6 +259,8 @@ function isPlayerDefeated(player1, player2) { // check if one players is defeate
 }
 
 function handlePlayerReady() {
+    battleTimer(timer_time);
+
     switchActivePlayer();
     updateUIForNextMove(active_player);
 }
@@ -261,6 +275,10 @@ function switchActivePlayer() {
 }
 
 function handleGameMove() {
+    clearTimeout(timer);
+    clearInterval(timer);
+    document.querySelector("#timer-block").textContent = "--:--";
+
     playerMoveChoice(active_player, inactive_player);
 
     if (step_counter % 2 !== 0) {
