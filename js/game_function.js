@@ -105,27 +105,33 @@ function roundResultUI() {
     document.querySelector("#round-results-p1-name").innerHTML = player_one.nickname;
     document.querySelector("#round-results-p1-image").src = player_one.character_img_path;
 
-
-    console.log(player_one);
-    console.log(player_one.nickname);
-    console.log(player_one.health);
-
     document.querySelector("#round-results-p1-health p").innerHTML = player_one.health;
     document.querySelector("#round-results-p1-health span").style.width = ((player_one.health * 100) / player_one.full_health ) + "%";
     
 
+    toggleVisibility("#round-results-p1-shield", true, "flex");
+    toggleVisibility("#round-results-p1-atk", true, "flex");
+
+    toggleVisibility("#round-results-p2-shield", true, "flex");
+    toggleVisibility("#round-results-p2-atk", true, "flex");
+
+
     switch (player_one.deff_choice) {
-        case "head/body":
+        case "head/chest":
             p1_result_deff = 0
             break;
-        case "body/groin":
-            p1_result_deff = 25;
+        case "chest/belly":
+            p1_result_deff = 20;
+            break;
+        case "belly/groin":
+            p1_result_deff = 40;
             break;
         case "groin/legs":
-            p1_result_deff = 50;
+            p1_result_deff = 60;
             break;
         default:
             p1_result_deff = 0;
+            document.querySelector("#round-results-p1-shield").style.display = "none";
             break;
     }
 
@@ -135,17 +141,21 @@ function roundResultUI() {
         case "head":
             p1_result_atk = 0
             break;
-        case "body":
-            p1_result_atk = 25;
+        case "chest":
+            p1_result_atk = 20;
+            break;
+        case "belly":
+            p1_result_atk = 40;
             break;
         case "groin":
-            p1_result_atk = 50;
+            p1_result_atk = 60;
             break;
         case "legs":
-            p1_result_atk = 75;
+            p1_result_atk = 80;
             break;
         default:
             p1_result_atk = 0;
+            document.querySelector("#round-results-p1-atk").style.display = "none";
             break;
     }
 
@@ -160,17 +170,21 @@ function roundResultUI() {
     document.querySelector("#round-results-p2-health span").style.width = ((player_two.health * 100) / player_two.full_health ) + "%";
 
     switch (player_two.deff_choice) {
-        case "head/body":
+        case "head/chest":
             p2_result_deff = 0
             break;
-        case "body/groin":
-            p2_result_deff = 25;
+        case "chest/belly":
+            p2_result_deff = 20;
+            break;
+        case "belly/groin":
+            p2_result_deff = 40;
             break;
         case "groin/legs":
-            p2_result_deff = 50;
+            p2_result_deff = 60;
             break;
         default:
             p2_result_deff = 0;
+            document.querySelector("#round-results-p2-shield").style.display = "none";
             break;
     }
 
@@ -180,26 +194,25 @@ function roundResultUI() {
         case "head":
             p2_result_atk = 0
             break;
-        case "body":
-            p2_result_atk = 25;
+        case "chest":
+            p2_result_atk = 20;
+            break;
+        case "belly":
+            p2_result_atk = 40;
             break;
         case "groin":
-            p2_result_atk = 50;
+            p2_result_atk = 60;
             break;
         case "legs":
-            p2_result_atk = 75;
+            p2_result_atk = 80;
             break;
         default:
             p2_result_atk = 0;
+            document.querySelector("#round-results-p2-atk").style.display = "none";
             break;
     }
 
-    document.querySelector("#round-results-p2-atk").style.top =  p2_result_atk + "%";
-    console.log(p1_result_atk);
-    console.log(p1_result_deff);
-    console.log('\n');
-    console.log(p2_result_atk);
-    console.log(p2_result_deff);    
+    document.querySelector("#round-results-p2-atk").style.top =  p2_result_atk + "%";  
 }
 
 
@@ -218,7 +231,6 @@ function battleTimer(duration) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        console.log(time);
         document.querySelector("#timer-block").textContent = minutes + ":" + seconds;
 
         if (--time < 0) {
